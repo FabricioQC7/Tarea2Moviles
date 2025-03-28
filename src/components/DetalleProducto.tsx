@@ -6,10 +6,10 @@ import {
     IonInfiniteScroll,
     IonInfiniteScrollContent
 } from '@ionic/react';
-import { useProductosLogic } from '../constantes/Producto';
+import { ProductoL } from '../constantes/Producto';
 
 const ProductosList = () => {
-    const { productosVisibles, cargarMas } = useProductosLogic();
+    const { productosVisibles, cargarMas } = ProductoL();
 
     const handleScroll = (ev: CustomEvent<void>) => {
         setTimeout(() => {

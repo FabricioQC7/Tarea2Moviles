@@ -5,7 +5,7 @@ export interface Producto {
     image: string;
 }
 
-export const useProductosLogic = () => {
+export const ProductoL = () => {
     const [productos, setProductos] = useState<Producto[]>([]);
     const [productosVisibles, setProductosVisibles] = useState<Producto[]>([]);
     const [contador, setContador] = useState(10);
@@ -24,7 +24,7 @@ export const useProductosLogic = () => {
         const nuevosProductos = productos.slice(0, contador + 5);
         setProductosVisibles(nuevosProductos);
         setContador(contador + 5);
-        return nuevosProductos.length >= productos.length;
+        return nuevosProductos.length === productos.length;
     };
 
     return { productosVisibles, cargarMas };
